@@ -7,7 +7,7 @@ All analyses were conducted using Excel’s built-in analytical tools for academ
 
 ---
 
-## 🎯 Objectives
+## 🎯 Business question
 - To examine the relationship between **attendance percentage** and final grades
 - To analyze how **study hours** affect student performance
 - To compare academic performance across **subjects**
@@ -18,10 +18,16 @@ All analyses were conducted using Excel’s built-in analytical tools for academ
 
 ## 📂 Dataset Description
 The dataset contains records for **25,000 students**, including:
+- Age
+- Gender
+- School type
 - Attendance percentage
+- Internet access
+- Travel time
+- Extra activites
 - Study hours
 - Subject (Mathematics, English, Science)
-- Education level
+- Parents education level
 - Study methods
 - Final grades / performance scores
 
