@@ -1,6 +1,11 @@
 # 📊 Student Performance Analysis (Microsoft Excel)
 
+
 <img width="740" height="740" alt="Image" src="https://github.com/user-attachments/assets/46941aca-f426-44cf-91ec-41f20a71f78d" />
+
+
+
+
 ## 📌 Project Overview
 This project investigates factors influencing students’ academic performance using **Microsoft Excel**. The analysis focuses on **attendance percentage**, **study hours**, **education level**, and **study methods**, applying **pivot tables**, **data visualizations**, and **regression analysis** to identify patterns and statistically supported relationships.
 
