@@ -210,5 +210,5 @@ Overall, study methods and extracurricular activities do not meaningfully explai
 └── README.md
 
 These steps will help replicate the analysis and verify the findings
-i am open to collaborate on data analysis,visualization related projects, and statical analysis. you can reach me via email(ngoouzor@gamil.com)
+I am open to collaborate on data analysis,visualization related projects, and statical analysis. you can reach me via email(ngoouzor@gmail.com)
 
