@@ -1,177 +1,172 @@
 # 📊 Student Performance Analysis Using Microsoft Excel
 
 
-
 <img width="740" height="740" alt="Image" src="https://github.com/user-attachments/assets/46941aca-f426-44cf-91ec-41f20a71f78d" />
 
 
+## 📌 Project Overview
+This project analyzes student academic performance using **Microsoft Excel** to identify key factors influencing overall scores. The analysis combines **pivot tables** and **regression techniques** to answer business and academic questions related to attendance, study habits, parental education, and access to resources.
 
-
-## 1. Introduction
-Academic performance is influenced by a combination of behavioural, academic, and socio-economic factors. Understanding how these factors relate to student outcomes can support better educational planning and decision-making.
-
-This project uses **Microsoft Excel** to analyze student performance data in order to answer specific **business (analytical) questions** related to attendance, study habits, background characteristics, and learning strategies. The analysis combines **pivot tables**, **data visualization**, and **regression analysis** to provide both descriptive and inferential insights.
+All analyses were conducted on a dataset containing **25,000 student records**.
 
 ---
 
-## 2. Business / Research Questions
-This analysis is guided by the following business questions:
+## 🎯 Business / Research Questions
 
-1. How does overall student performance differ by **school type**, **gender**, and **internet access**?  
-2. How does students’ average performance change across different levels of **study hours**?  
-3. What is the relationship between **attendance percentage** and students’ overall score?  
-4. How does **parental education level** relate to students’ academic performance?  
-5. How do **extracurricular activities and study methods** affect students’ academic performance?
-
-Each question is addressed using appropriate Excel-based analytical techniques.
+1. How does overall student performance differ by school type, gender, and internet access?
+2. How does students’ average performance change across different levels of study hours?
+3. What is the relationship between attendance percentage and students’ overall score?
+4. How does parental education level relate to students’ academic performance?
+5. How do extracurricular activities and study methods affect students’ academic performance?
 
 ---
 
-## 3. Dataset Description
-The dataset consists of **25,000 student observations** and includes the following variables:
-
-- Overall score / final grade  
-- Attendance percentage  
-- Study hours  
-- School type  
-- Gender  
-- Internet access  
-- Parental education level  
-- Study methods and extracurricular activities  
-- Subject (Mathematics, English, Science)
-
-The dataset is used strictly for **educational and analytical purposes**.
+## 🛠 Tools Used
+- Microsoft Excel  
+- Excel Pivot Tables  
+- Excel Data Analysis ToolPak (Regression)
 
 ---
 
-## 4. Data Preparation
-Prior to analysis:
-- Data was reviewed for consistency and completeness
-- Categorical variables were grouped appropriately
-- Study hours were categorized (low, medium, high) for pivot table analysis
-- All analyses were conducted using **Microsoft Excel**
+## 📊 Analysis & Results
 
 ---
 
-## 5. Descriptive Analysis Using Pivot Tables
+## 1️⃣ Performance by School Type, Gender, and Internet Access (Pivot Tables)
 
-### 5.1 Business Question 1  
-**How does overall student performance differ by school type, gender, and internet access?**
+Pivot tables were used to compare average student scores across demographic and access-related categories.
 
-**Method Used:** Pivot tables and charts  
+**Key Findings:**
+- Student performance varies across different school types.
+- Small but noticeable differences exist between genders.
+- Students with internet access consistently perform better on average than those without access.
 
-Pivot tables were created to calculate **average overall scores** across:
-- Different school types
-- Gender categories
-- Internet access (yes/no)
-
-**Findings:**
-- Differences in average performance were observed across school types
-- Gender-based performance differences were identified
-- Students with internet access generally showed higher average performance
-
-These results highlight how access to resources and demographic characteristics are associated with performance differences.
+*Method used:* Pivot Tables
 
 ---
 
-### 5.2 Business Question 2  
-**How does students’ average performance change across different levels of study hours?**
+## 2️⃣ Study Hours and Academic Performance (Pivot Tables)
 
-**Method Used:** Pivot tables and charts  
+Students were grouped into study-hour categories (Low, Medium, High) using Excel bins.
 
-Study hours were grouped into **low, medium, and high** categories.
+| Study Hours Category | Average Performance |
+|---------------------|--------------------|
+| Low | Lower mean score |
+| Medium | Moderate mean score |
+| High | Highest mean score |
 
-**Findings:**
-- Average performance increased as study hours increased
-- Students in the high study-hour group achieved the highest mean scores
-- The relationship showed a positive trend, though not perfectly linear
+**Interpretation:**  
+Average academic performance increases as study hours increase, indicating a positive descriptive relationship between time spent studying and performance.
 
-This suggests that increased study time is associated with improved academic outcomes.
-
----
-
-### 5.3 Subject-wise Performance Comparison
-Pivot tables were also used to compare average performance across subjects (Mathematics, English, Science).
-
-**Findings:**
-- Mean scores differed across subjects
-- Subject characteristics contribute to variation in student performance
-- These differences help explain variation not captured by single-variable models
+*Method used:* Pivot Tables
 
 ---
 
-## 6. Data Visualization
-Charts were generated directly from pivot tables to support interpretation:
-- Bar charts showing performance by school type, gender, and internet access
-- Charts comparing performance across study-hour categories
-- Subject-wise performance comparison charts
+## 3️⃣ Regression Analysis: Attendance Percentage and Overall Score
 
-Visualizations enhanced clarity and supported evidence-based interpretation.
+A simple linear regression was conducted to examine the effect of attendance on students’ overall scores.
 
----
+### Regression Statistics
 
-## 7. Regression Analysis
+| Metric | Value |
+|------|------|
+| Observations | 25,000 |
+| Multiple R | 0.293 |
+| R Square | 0.0857 (8.6%) |
+| Adjusted R Square | 0.0857 |
+| Standard Error | 18.10 |
+| F-statistic | 2343.41 |
+| Significance (p-value) | < 0.001 |
 
-### 7.1 Business Question 3  
-**What is the relationship between attendance percentage and students’ overall score?**
+### Coefficients
 
-**Method Used:** Simple linear regression (Excel Data Analysis ToolPak)
+| Variable | Coefficient (β) | Std. Error | t-stat | p-value |
+|-------|---------------|-----------|-------|--------|
+| Intercept | 35.05 | 0.61 | 57.56 | < 0.001 |
+| Attendance Percentage | 0.386 | 0.008 | 48.41 | < 0.001 |
 
-- **Dependent variable:** Overall score  
-- **Independent variable:** Attendance percentage  
-- **Observations:** 25,000  
+**Interpretation:**  
+Attendance percentage has a positive and statistically significant relationship with overall student performance. A 1% increase in attendance is associated with an average increase of approximately 0.39 marks. Attendance explains about 8.6% of the variation in performance, indicating it is an important but not exclusive predictor.
 
-**Key Results:**
-- R Square = 0.0857 (≈ 8.6%)
-- Regression coefficient (β) = 0.386
-- p-value < 0.001
-- F-statistic = 2343.41
-
-**Interpretation:**
-There is a positive and statistically significant relationship between attendance and academic performance. A 1% increase in attendance is associated with an average increase of approximately 0.39 marks in overall score. Attendance explains about 8.6% of the variation in performance, making it the most practically meaningful predictor in this analysis.
+*Method used:* Simple Linear Regression
 
 ---
 
-### 7.2 Business Question 4  
-**How does parental education level relate to students’ academic performance?**
+## 4️⃣ Parental Education Level and Academic Performance
 
-**Method Used:** Multiple linear regression
+A multiple regression analysis was used to examine whether parental education level predicts students’ academic performance.
 
-- **Independent variables:**  
-  High school, diploma, graduate, post-graduate, PhD  
-- **Observations:** 25,000  
+### Regression Statistics
 
-**Key Results:**
-- R Square = 0.00063 (0.063%)
-- Adjusted R Square = 0.00043
-- Significance F = 0.0075
+| Metric | Value |
+|------|------|
+| Observations | 25,000 |
+| Multiple R | 0.025 |
+| R Square | 0.00063 (0.063%) |
+| Adjusted R Square | 0.00043 |
+| Standard Error | 18.93 |
+| F-statistic | 3.16 |
+| Significance (p-value) | 0.0075 |
 
-**Interpretation:**
-Although the model is statistically significant, parental education level explains less than 0.1% of the variation in academic performance. None of the education categories are statistically significant predictors at the 5% level. This indicates that parental education level has negligible practical impact on student performance in this dataset.
+### Coefficients
 
----
+| Education Level | Coefficient | Std. Error | t-stat | p-value |
+|---------------|------------|-----------|-------|--------|
+| Intercept | 63.91 | 0.30 | 215.64 | < 0.001 |
+| Post-graduate | 0.66 | 0.42 | 1.58 | 0.115 |
+| Graduate | 0.05 | 0.42 | 0.12 | 0.905 |
+| High school | −0.52 | 0.42 | −1.25 | 0.211 |
+| Diploma | 0.74 | 0.41 | 1.80 | 0.072 |
+| PhD | −0.37 | 0.42 | −0.88 | 0.379 |
 
-### 7.3 Business Question 5  
-**How do extracurricular activities and study methods affect students’ academic performance?**
+**Interpretation:**  
+Parental education level explains less than 0.1% of the variation in student performance. None of the education categories show a statistically significant effect, indicating very weak predictive power.
 
-**Method Used:** Multiple linear regression
-
-- **Independent variables:**  
-  Extra activities, note-taking, group study, coaching, mixed methods, online videos  
-- **Observations:** 25,000  
-
-**Key Results:**
-- R Square = 0.00070 (0.07%)
-- Adjusted R Square = 0.00046
-- Significance F = 0.0078
-
-**Interpretation:**
-The regression model explains less than 0.1% of the variation in academic performance. Only group study is statistically significant at the 5% level and shows a small negative association with performance. All other study methods and extracurricular activities are not statistically significant predictors.
-
-Overall, study methods and extracurricular activities do not meaningfully explain academic performance in this dataset.
+*Method used:* Multiple Linear Regression
 
 ---
 
+## 5️⃣ Extracurricular Activities & Study Methods
+
+A multiple regression model was used to evaluate the impact of extracurricular activities and different study methods on academic performance.
+
+### Regression Statistics
+
+| Metric | Value |
+|------|------|
+| Observations | 25,000 |
+| Multiple R | 0.026 |
+| R Square | 0.00070 (0.07%) |
+| Adjusted R Square | 0.00046 |
+| Standard Error | 18.93 |
+| F-statistic | 2.91 |
+| Significance (p-value) | 0.0078 |
+
+### Coefficients
+
+| Study Method | Coefficient | Std. Error | t-stat | p-value |
+|------------|------------|-----------|-------|--------|
+| Intercept | 64.10 | 0.31 | 204.01 | < 0.001 |
+| Extra activities | 0.29 | 0.24 | 1.20 | 0.232 |
+| Notes | −0.34 | 0.41 | −0.83 | 0.405 |
+| Group study | −0.99 | 0.41 | −2.38 | 0.017 |
+| Coaching | 0.13 | 0.42 | 0.31 | 0.755 |
+| Mixed methods | −0.63 | 0.41 | −1.53 | 0.125 |
+| Online videos | 0.45 | 0.41 | 1.08 | 0.279 |
+
+**Interpretation:**  
+Only group study shows a statistically significant effect, with a small negative association. Overall, extracurricular activities and study methods explain very little variation in academic performance.
+
+*Method used:* Multiple Linear Regression
+
+---
+
+## 📁 Repository Contents
+- Excel files containing pivot tables
+- Excel regression outputs
+- Final README documentation
+
+---
 ## 8. Comparison of Findings Across Business Questions
 - Attendance percentage shows both **statistical significance and practical relevance**
 - Study hours show positive trends in descriptive analysis
@@ -197,6 +192,9 @@ Overall, study methods and extracurricular activities do not meaningfully explai
 
 ---
 
+## ✅ Conclusion
+This project demonstrates how Excel-based analytical tools can be used to explore academic performance data. While attendance shows a meaningful relationship with student performance, most other factors examined have limited explanatory power, highlighting the multifaceted nature of academic success.
+
 ## 11. Repository Structure
 ```text
 ├── data/
@@ -210,5 +208,5 @@ Overall, study methods and extracurricular activities do not meaningfully explai
 └── README.md
 
 These steps will help replicate the analysis and verify the findings
-I am open to collaborate on data analysis,visualization related projects, and statical analysis. you can reach me via email:ngoouzor@gmail.com
+I am open to collaborate on data analysis,visualization related projects, and statical analysis. you can reach me via email:{ngoouzor@gmail.com}
 
