@@ -208,5 +208,6 @@ This project demonstrates how Excel-based analytical tools can be used to explor
 └── README.md
 
 These steps will help replicate the analysis and verify the findings
+
 I am open to collaborate on data analysis,visualization related projects, and statical analysis. you can reach me via email:{ngoouzor@gmail.com}
 
